@@ -1,7 +1,7 @@
 """
 Personal uility for common functions
 Author : Jason Yang
-Version: 0.0.2
+Version: 0.0.3
 Created: 2020/03/31
 Revised:
 - 2020/04/01 - version 0.01
