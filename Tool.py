@@ -15,7 +15,7 @@ Revised:
 - 2020/04/02 - version 0.0.3
   - Revise urllib.error to error
 - 2020/04/03 - version 0.0.4
-  - Build test and found some failures and update.
+  - Build test, some failures found and update.
 """
 import json
 import zlib
