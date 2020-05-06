@@ -90,12 +90,12 @@ class Clock():
             (180-stop, 180-start))
         if start == stop%360:
             self.figure.append(
-                draw.DrawCircle(
+                draw.draw_cricle(
                     (x, y), r, fill_color=fill, line_color=line,
                     line_width=width))
         else:
             self.figure.append(
-                draw.DrawArc(
+                draw.draw_arc(
                     (x-r, y+r), (x+r, y-r), stop-start, start, style=style,
                     arc_color=fill, line_width=width))
 
@@ -112,7 +112,7 @@ class Clock():
         self.all[0] +=  delta_x
         self.all[1] +=  delta_y
         for figure in self.figure:
-            draw.MoveFigure(figure, delta_x, delta_y)
+            draw.move_figure(figure, delta_x, delta_y)
 
 
 class Tick():
@@ -161,7 +161,7 @@ class Tick():
             start_y = y + start_radius*math.sin(i/180*math.pi)
             stop_x  = x +  stop_radius*math.cos(i/180*math.pi)
             stop_y  = y +  stop_radius*math.sin(i/180*math.pi)
-            self.figure.append(draw.DrawLine((start_x, start_y),
+            self.figure.append(draw.draw_line((start_x, start_y),
                 (stop_x, stop_y), color=line_color, width=line_width))
 
     def move(self, delta_x, delta_y):
@@ -177,7 +177,7 @@ class Tick():
         self.all[0] += delta_x
         self.all[1] += delta_y
         for figure in self.figure:
-            draw.MoveFigure(figure, delta_x, delta_y)
+            draw.move_figure(figure, delta_x, delta_y)
 
 class Pointer():
     """
@@ -223,7 +223,7 @@ class Pointer():
             outer_color, pointer_color, origin_color, line_width) = self.all
         if self.figure != []:
             for figure in self.figure:
-                draw.DeleteFigure(figure)
+                draw.delete_figure(figure)
             self.figure = []
         d = degree - 90
         self.all[2] = degree
@@ -232,11 +232,11 @@ class Pointer():
         dx2 = int(outer_radius*math.sin(d/180*math.pi))
         dy2 = int(outer_radius*math.cos(d/180*math.pi))
         self.figure.append(
-            draw.DrawLine(
+            draw.draw_line(
                 (center_x-dx1, center_y-dy1), (center_x+dx2, center_y+dy2),
                 color=pointer_color, width=line_width))
         self.figure.append(
-            draw.DrawCircle(
+            draw.draw_circle(
                 (center_x, center_y), inner_radius, fill_color=origin_color,
                 line_color=outer_color, line_width=line_width))
 
@@ -248,11 +248,11 @@ class Pointer():
         : Return
           None.
         """
-        if False in Map(isinstance, [delta_x, delta_y], (int, float)):
+        if False in mapping(isinstance, [delta_x, delta_y], (int, float)):
             raise ValueError
         self.all[:2] = [self.all[0] + delta_x, self.all[1] + delta_y]
         for figure in self.figure:
-            draw.MoveFigure(figure, delta_x, delta_y)
+            draw.movefigure(figure, delta_x, delta_y)
 
 class Meter():
     """
