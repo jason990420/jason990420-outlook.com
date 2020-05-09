@@ -66,6 +66,8 @@ html = read_URL(url, data=None, headers=None, encoding='utf-8', user='xxxx', pas
 2. PySimpleGUI Tool
    New Tree class with functions
    - delete_node(self, key)
+   - delete_nodes(self, keys)
+   - delete_all_nodes(self)
    - dump_tree(self)
    - get_text(self, key)
    - get_value(self, key)
