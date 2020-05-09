@@ -1,6 +1,8 @@
 # jason990420-outlook.com
 Two personel libraries
 
+Note: All actions allowed for all files here, but should be with author name and the link of file.
+
 1. Tool.py
    With general functions
    
