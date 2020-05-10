@@ -66,7 +66,8 @@ html = read_URL(url, data=None, headers=None, encoding='utf-8', user='xxxx', pas
 ```
 
 2. PySimpleGUI Tool
-   New Tree class with functions
+[Demo Picture](https://github.com/jason990420/jason990420-outlook.com/blob/master/Picture/Picture%20for%20Tree%20Demo.jpg)
+   New Tree class with more functions
    - delete_node(self, key)
    - delete_nodes(self, keys)
    - delete_all_nodes(self)
@@ -85,5 +86,16 @@ html = read_URL(url, data=None, headers=None, encoding='utf-8', user='xxxx', pas
    - set_value(self, key, text)
    - sort_tree(self, func=None)
    - where(self)
+   
+   Demo file to show how to use it.
+
+   New Button Class for stadium shape background.
+   
+   [Demo Picture](https://github.com/jason990420/jason990420-outlook.com/blob/master/Picture/Button%20Demo.jpg
+   
+   - Class Button
+   - function FileBrowse
+   - function FileSaveAs
+   - function FolderBrowse
    
    Demo file to show how to use it.
