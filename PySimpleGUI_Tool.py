@@ -27,6 +27,7 @@ from PIL import Image, ImageDraw
 class Button(sg.Button):
     """
     New Button class of PySimpleGUI with stadium shape background.
+    Disabled state not shown well.    
     """
     def __init__(
         self, button_text='', button_type=sg.BUTTON_TYPE_READ_FORM,
