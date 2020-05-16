@@ -373,7 +373,7 @@ class Thread():
         self.func = func
         self.fail = fail
         self.all = sequence
-        self.total = len(all)
+        self.total = len(self.all)
         self.temp = {}
         self.queue = {}
         self.size = size
