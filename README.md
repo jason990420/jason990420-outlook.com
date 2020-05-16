@@ -63,7 +63,17 @@ html = read_URL(url, data=None, headers=None, encoding='utf-8', user='xxxx', pas
     return True if a<b or a>c else False
 >>> filter_(func, [1,2,3,4,5,6,7,8,9,10], 5, 8)
 [1, 2, 3, 4, 9, 10]
-```
+
+# class Thread
+T = Thread(func, sequence, fail=None, size=40)
+Manage jobs for threading by list.
+: Parameters
+  func - callable method to thread.
+  sequence - list of tuple, each arguments for func.
+  fail - callable method if func return Fail.
+  size - max size of thread queue.
+: Return
+  Obejct of Thread manager.
 
 2. PySimpleGUI Tool
 
