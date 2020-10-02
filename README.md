@@ -74,6 +74,7 @@ Manage jobs for threading by list.
   size - max size of thread queue.
 : Return
   Obejct of Thread manager.
+```
 
 2. PySimpleGUI Tool
 
