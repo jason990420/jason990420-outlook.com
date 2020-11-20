@@ -84,7 +84,7 @@ html = read_URL(url, data=None, headers=None, encoding='utf-8', user='xxxx', pas
 
 # transpose
 >>> transpose([[1,2,3], [4,5,6], [7,8,9]])
-[[1,4,7], [2,5,6], [7,8,9]]
+[[1, 4, 7], [2, 5, 8], [3, 6, 9]]
 
 # class Thread
 T = Thread(func, sequence, fail=None, size=40)
