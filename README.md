@@ -31,7 +31,7 @@ from Tool import *
 
 # filter_
 >>> def func(a, b, c):
-    return True if a<b or a>c else False
+        return True if a<b or a>c else False
 >>> filter_(func, [1,2,3,4,5,6,7,8,9,10], 5, 8)
 [1, 2, 3, 4, 9, 10]
 
