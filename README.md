@@ -9,6 +9,61 @@ Note: All actions allowed for all files here, but should be with author name and
 ``` Python
 from Tool import *
 
+# color_convert
+>>> color_convert("#80A0FF", to_hex=True)
+'#80A0FF'
+>>> color_convert("#80A0FF")
+(128, 160, 255)
+>>> color_convert((128, 160, 255), to_hex=True)
+'#80A0FF'
+>>> color_convert((128, 160, 255))
+(128, 160, 255)
+>>> color_convert("blue", to_hex=True)
+'#0000FF'
+>>> color_convert("blue")
+(0, 0, 255)
+
+# f-string
+>>> books = 10
+>>> fmt = 'I have {books} books'
+>>> f(fmt)
+'I have 10 books'
+
+# filter_
+>>> def func(a, b, c):
+    return True if a<b or a>c else False
+>>> filter_(func, [1,2,3,4,5,6,7,8,9,10], 5, 8)
+[1, 2, 3, 4, 9, 10]
+
+# flat
+>>> flat([1,[2,3,4], [5,6,[7,8,9],10]])
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# get_substring
+>>> text = '<link rel="dns-prefetch" href="https://github.githubassets.com">'
+>>> get_substring(text, 'href="', '">')
+'https://github.githubassets.com'
+
+# len_
+>>> a, b, c, d = 1, '123', [1,2,3], (1,2,3)
+>>> len_(a), len_(b), len_(c), len_(d)
+(1, 3, 3, 3,)
+
+# load_color_table
+>>> load_color_table()
+{'AliceBlue': '#f0f8ff', 'AntiqueWhite': '#faebd7', ...,  'yellow2': '#eeee00', 'yellow3': '#cdcd00', 'yellow4': '#8b8b00'}
+
+# load_family_list
+>>> load_family_list()
+('System', '@System', 'Terminal', ...,  'Open Sans Semibold', 'SimHei', '@SimHei')
+
+# mapping
+>>> def func(a, b, c):
+...     return a*b+c
+... 
+>>> mapping(func, [1,2,3,4], 10, 5)
+[15, 25, 35, 45]
+
 # txt file read and save
 text = read_file('file1.txt')
 if text != None:
@@ -31,39 +86,6 @@ html = read_URL(url, data=None, headers=None, encoding='utf-8', user='xxxx', pas
 >>> transpose([[1,2,3], [4,5,6], [7,8,9]])
 [[1,4,7], [2,5,6], [7,8,9]]
 
-# get_substring
->>> text = '<link rel="dns-prefetch" href="https://github.githubassets.com">'
->>> get_substring(text, 'href="', '">')
-'https://github.githubassets.com'
-
-# flat
->>> flat([1,[2,3,4], [5,6,[7,8,9],10]])
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# f-string
->>> books = 10
->>> fmt = 'I have {books} books'
->>> f(fmt)
-'I have 10 books'
-
-# len_
->>> a, b, c, d = 1, '123', [1,2,3], (1,2,3)
->>> len_(a), len_(b), len_(c), len_(d)
-(1, 3, 3, 3,)
-
-# mapping
->>> def func(a, b, c):
-...     return a*b+c
-... 
->>> mapping(func, [1,2,3,4], 10, 5)
-[15, 25, 35, 45]
-
-# filter_
->>> def func(a, b, c):
-    return True if a<b or a>c else False
->>> filter_(func, [1,2,3,4,5,6,7,8,9,10], 5, 8)
-[1, 2, 3, 4, 9, 10]
-
 # class Thread
 T = Thread(func, sequence, fail=None, size=40)
 Manage jobs for threading by list.
@@ -74,7 +96,14 @@ Manage jobs for threading by list.
   size - max size of thread queue.
 : Return
   Obejct of Thread manager.
+  
+# types
+>>> types([123, '123', [1, '1'], (1, '1'), {1:10}, {5}, 1.3])
+[<class 'int'>, <class 'str'>, [<class 'int'>, <class 'str'>], (<class 'int'>, <class 'str'>), <class 'dict'>, <class 'set'>, <class 'float'>]
+>>> types([123, '123', [1, '1'], (1, '1'), {1:10}, {5}, 1.3]) == [int, str, [int, str], (int, str), dict, set, float]
+True
 ```
+
 
 2. PySimpleGUI Tool
 
