@@ -64,6 +64,7 @@ from http import client
 from copy import deepcopy
 from base64 import b64encode, b64decode
 from tkinter import Tk, font as tk_font
+from lxml import etree
 
 __text_file__  = ['.txt', '.py']
 __json_file__  = ['.json']
