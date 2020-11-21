@@ -536,5 +536,7 @@ def types(variable):
     """
     kind = type(variable)
     if kind in (list, tuple):
+        if len(variable) == 0:
+            return kind
         return kind([types(item) for item in variable])
     return kind
